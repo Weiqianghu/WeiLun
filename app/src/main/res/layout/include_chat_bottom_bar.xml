@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/base_scrollview_top_height"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <Button
+            android:id="@+id/btn_chat_add"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:onClick="selectImg"
+            android:background="@drawable/btn_chat_add_selector"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/btn_chat_emo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="6dp"
+            android:background="@drawable/btn_chat_emo_selector"
+            android:gravity="center"
+            android:onClick="selectEmoji"/>
+
+        <EditText
+            android:id="@+id/edit_user_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/chat_edit_input_bg"
+            android:imeOptions="flagNoExtractUi"
+            android:minHeight="@dimen/tab_padding_left_right"
+            android:padding="5dp" />
+
+
+        <Button
+            android:id="@+id/btn_chat_send"
+            android:onClick="sendChatMessage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_chat_send_selector"
+            android:gravity="center"
+            android:visibility="gone"></Button>
+
+    </LinearLayout>
+
+</LinearLayout>

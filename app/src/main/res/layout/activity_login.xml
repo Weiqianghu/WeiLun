@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/loginBackgroundColor">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:gravity="center"
+            android:text="登录"
+            android:textSize="18sp"
+            android:textColor="@color/textColor"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+        <Button
+            android:id="@+id/btnCancel"
+            android:text="取消"
+            android:onClick="cancel"
+            android:textSize="18sp"
+            android:textColor="@color/mainColor"
+            android:background="@color/loginBackgroundColor"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <com.weilun.ui.CircleImageView
+            android:id="@+id/userImg"
+            android:layout_centerInParent="true"
+            android:src="@drawable/launch_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+    </RelativeLayout>
+    
+    <com.weilun.ui.ClearEditText
+        android:id="@+id/mobileNo"
+        android:digits="0123456789"
+        android:hint="手机号"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/shape_textview_cart"
+        android:layout_height="50dp" />
+    <com.weilun.ui.ClearEditText
+        android:id="@+id/password"
+        android:hint="密码"
+        android:password="true"
+        android:background="@drawable/shape_textview_cart"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_Submit"
+            android:layout_margin="15dp"
+            android:text="登录"
+            android:textSize="18sp"
+            android:onClick="login"
+            android:layout_width="match_parent"
+            android:textColor="@color/textColor"
+            android:background="@color/mainColor"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_marginRight="15sp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/btn_Submit"
+            android:textColor="@color/linkColor"
+            android:textSize="14sp"
+            android:text="找回密码"
+            android:id="@+id/forgetPassword"
+            android:onClick="forgetPassword"
+            android:background="@color/loginBackgroundColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

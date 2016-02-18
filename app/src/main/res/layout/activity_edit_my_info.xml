@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="编辑我的信息"
+            android:textColor="@color/textColor"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/backgroundColor" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/shape_linearlaou"
+        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:text="登录名"
+            android:textColor="@color/textColor"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/mobileNo"
+            android:textSize="16sp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:text="18521595797"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:background="@drawable/shape_linearlaou"
+        android:onClick="editUserName"
+        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:text="用户名"
+            android:textColor="@color/textColor"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/userName"
+            android:textSize="16sp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:text="18521595797"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:background="@drawable/shape_linearlaou"
+        android:paddingLeft="20dp"
+        android:onClick="editSex"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:text="性别"
+            android:textColor="@color/textColor"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/sex"
+            android:textSize="16sp"
+            android:layout_marginLeft="40dp"
+            android:gravity="center_vertical"
+            android:text="男"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:onClick="editAge"
+        android:background="@drawable/shape_linearlaou"
+        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:text="年龄"
+            android:textColor="@color/textColor"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/age"
+            android:textSize="16sp"
+            android:layout_marginLeft="40dp"
+            android:gravity="center_vertical"
+            android:text="20"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnChangePassword"
+        android:onClick="changePassword"
+        android:layout_marginTop="30dp"
+        android:text="修改密码"
+        android:textColor="@color/textColor"
+        android:textSize="18sp"
+        android:background="@color/mainColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

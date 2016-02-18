@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/posts_detail_top_bar" />
+
+    <ScrollView
+        android:id="@+id/commentsScrollView"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:id="@+id/userImg"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/launch_img" />
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="胡伟强"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/userSex"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/male" />
+
+                <TextView
+                    android:id="@+id/postsDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="2015-12-15"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/addFriendByPostsAuthor"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/add" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="加好友"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/postsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="欢迎来到微论，随时随地论起来"
+                android:textSize="18sp" />
+            <include layout="@layout/line"/>
+            <TextView
+                android:id="@+id/postsContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="欢迎来到微论，随时随地论起来，微论是一个很有趣的交流交友平台，大家积极发言，我们的目标是星辰大海，欢迎来到微论，随时随地论起来，微论是一个很有趣的交流交友平台，大家积极发言，我们的目标是星辰大海"
+                android:textColor="@color/textColor"
+                android:textSize="16sp" />
+
+            <com.weilun.ui.ListViewForScrollView
+                android:id="@+id/postsImgListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.weilun.ui.ListViewForScrollView>
+
+            <LinearLayout
+                android:id="@+id/postsContentImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/frame" />
+            </LinearLayout>
+
+            <com.weilun.ui.ListViewForScrollView
+                android:id="@+id/postsComments"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/posts_comments_bottom_bar" />
+</LinearLayout>

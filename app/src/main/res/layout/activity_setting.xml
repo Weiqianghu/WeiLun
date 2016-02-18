@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="设置"
+            android:textColor="@color/textColor"
+            android:textSize="18sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/backgroundColor" />
+        <TextView
+            android:text="检查更新"
+            android:textColor="@color/linkColor"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:onClick="checkVersion"
+            android:paddingLeft="20dp"
+            android:background="@drawable/shape_linearlaou"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+        </TextView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:background="@color/mainColor"
+        android:onClick="logout"
+        android:text="退出当前账户"
+        android:textColor="@color/textColor"
+        android:textSize="18sp" />
+</RelativeLayout>
+

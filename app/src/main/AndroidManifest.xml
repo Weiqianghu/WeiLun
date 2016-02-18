@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.weilun.weilun"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <!-- 允许程序打开网络套接字权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 保持屏幕常亮所需权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 读取手机联系人信息所需权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 向SD卡写入文件所需权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 读取SD卡状态所需权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 读取或更改系统设置 所需权限 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 手机震动所需权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 创建和删除文件所需权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 查询网络状态的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 调用系统窗口所需权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 用户定位所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <!-- 相机的权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 允许程序修改全局音频设置 比如说：存储位置 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- 录制语音权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+
+
+    <permission
+        android:name="cn.bmob.permission.push"
+        android:protectionLevel="normal"></permission>
+
+    <uses-permission android:name="cn.bmob.permission.push" />
+
+    <!-- IM聊天所需的Push start -->
+    <service
+        android:name="cn.bmob.push.lib.service.PushService"
+        android:exported="true"
+        android:label="PushService"
+        android:permission="cn.bmob.permission.push"
+        android:process="cn.bmob.push">
+        <intent-filter>
+            <action android:name="cn.bmob.push.lib.service.PushService" />
+        </intent-filter>
+    </service>
+
+    <receiver android:name="cn.bmob.push.PushReceiver">
+        <intent-filter android:priority="2147483647"> <!-- 优先级加最高 -->
+            <!-- 系统启动完成后会调用 -->
+            <action android:name="android.intent.action.BOOT_COMPLETED" />
+            <!-- 解锁完成后会调用 -->
+            <action android:name="android.intent.action.USER_PRESENT" />
+            <!-- 监听网络连通性 -->
+            <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+        </intent-filter>
+    </receiver>
+    <!-- 聊天消息接收器 -->
+    <receiver android:name="com.weilun.ChatMessageReceiver">
+        <intent-filter>
+            <action android:name="cn.bmob.push.action.MESSAGE" />
+        </intent-filter>
+    </receiver>
+
+    <!-- IM聊天所需的Push end -->
+
+
+    <!-- 个性功能中的启动定时检测服务，可选功能 -->
+    <service android:name="cn.bmob.im.poll.BmobPollService">
+        <intent-filter>
+            <action android:name="cn.bmob.im.service.BmobPollService" />
+        </intent-filter>
+    </service>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/launch_img"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.weilun.activity.MainActivity" />
+        <activity android:name="com.weilun.activity.LoginAndRegisterActivity" />
+        <activity android:name="com.weilun.activity.RegisterActivity" />
+        <activity android:name="com.weilun.activity.LoginActivity" />
+        <activity android:name="com.weilun.activity.VerifyActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.weilun.activity.SettingActivity" />
+        <activity android:name="com.weilun.activity.ForgetPasswordActivity" />
+        <activity android:name="com.weilun.activity.NetContConnectActivity" />
+        <activity android:name="com.weilun.activity.EditMyInfoActivity" />
+        <activity android:name="com.weilun.activity.PostsDetailsActivity" />
+        <activity
+            android:name="com.weilun.activity.ReviewActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.weilun.activity.PublishNewPostsActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name="com.weilun.activity.MultiImageSelectorActivity" />
+        <activity
+            android:name="cn.bmob.v3.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name="com.weilun.activity.ReviewRemindListActivity" />
+        <activity
+            android:name="com.weilun.activity.FriendsChatActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">微论</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_net_cont_connect">NetContConnectActivity</string>
+    <string name="folder_all">All Images</string>
+    <string name="preview">Preview</string>
+    <string name="msg_no_camera">No system camera found</string>
+    <string name="msg_amount_limit">Select images amount is limit</string>
+</resources>

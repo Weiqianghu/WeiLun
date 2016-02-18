@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/publish_posts_top_bar" />
+
+        <EditText
+            android:id="@+id/postsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/review_edit_text"
+            android:hint="标题..."
+            android:textColor="@color/textColor" />
+
+        <include layout="@layout/line" />
+
+        <EditText
+            android:id="@+id/postsContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/review_edit_text"
+            android:gravity="top"
+            android:hint="分享新鲜事..."
+            android:maxLength="500"
+            android:minLines="3"
+            android:textColor="@color/textColor" />
+
+        <include layout="@layout/additional_label" />
+
+        <FrameLayout
+            android:id="@+id/Container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></FrameLayout>
+
+        <GridView
+            android:id="@+id/selectImgGridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:columnWidth="80dp"
+            android:horizontalSpacing="3dp"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="3dp"></GridView>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/publishProgress"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>
+

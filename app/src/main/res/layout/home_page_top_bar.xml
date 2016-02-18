@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="首页"
+            android:textColor="@color/textColor"
+            android:textSize="18sp" />
+        <ImageView
+           android:layout_centerVertical="true"
+            android:id="@+id/publishNewPosts"
+            android:src="@drawable/publish_new_posts"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="28dp"
+            android:layout_height="28dp" />
+    </RelativeLayout>
+
+    <include layout="@layout/frame"/>
+
+</LinearLayout>
